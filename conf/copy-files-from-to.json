@@ -1,8 +1,8 @@
 {
   "copyFiles": [
     {
-      "from": "../public/css/",
-      "to": "../dist/css/"
+      "from": "../public/css",
+      "to": "../dist"
     }
   ]
 }
