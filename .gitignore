@@ -1,0 +1,8 @@
+node_modules/
+public/
+dist/
+backup/
+documents/
+materials/
+.tmp/
+npm-debug.log
