@@ -8,12 +8,21 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-      - name: npm install, build, test, and copy files to dist dir
+
+      - name: node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: npm install
+        run: npm ci
+
+      - name: npm build, test, and copy files to dist dir
         run: |
-          npm install
           npm run build:css
           npm test
           npm run copy:dist
+
       - name: Archive production artifacts
         uses: actions/upload-artifact@v4
         with:
