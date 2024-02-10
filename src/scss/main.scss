@@ -1,11 +1,14 @@
 @charset "UTF-8";
 
+@use "custom_properties";
+
 html {
     scroll-behavior: smooth;
 }
 
 body {
     line-height: 1.75;
+    color: var(--color-font-normal);
 }
 
 img,
