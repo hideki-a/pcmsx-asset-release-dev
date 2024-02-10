@@ -3,6 +3,10 @@
     {
       "from": "../public/css",
       "to": "../dist"
+    },
+    {
+      "from": "../public/js",
+      "to": "../dist"
     }
   ]
 }

@@ -19,7 +19,7 @@ jobs:
 
       - name: npm build, test, and copy files to dist dir
         run: |
-          npm run build:css
+          npm run build
           npm test
           npm run copy:dist
 

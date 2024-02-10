@@ -7,9 +7,11 @@
     "node": ">=20.x"
   },
   "scripts": {
+    "build": "run-p build:css build:webpack",
     "build:css": "npm run build:scss && npm run build:postcss",
     "build:scss": "sass src/scss/:.tmp/css/ --style=expanded",
     "build:postcss": "postcss .tmp/css/*.css --base .tmp/css/ --dir public/css/ --config conf/postcss.config.js",
+    "build:webpack": "webpack --config conf/webpack.config.js",
     "copy:dist": "copy-files-from-to --config conf/copy-files-from-to.json",
     "lint:css": "stylelint --config conf/stylelintrc.json src/scss/",
     "test": "run-p lint:*"
@@ -24,7 +26,11 @@
     "postcss-sort-media-queries": "^5.2.0",
     "sass": "^1.70.0",
     "stylelint": "^16",
-    "stylelint-config-sass-guidelines": "^11.0.0"
+    "stylelint-config-sass-guidelines": "^11.0.0",
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.3.3",
+    "webpack": "^5.90.1",
+    "webpack-cli": "^5.1.4"
   },
   "private": true
 }
